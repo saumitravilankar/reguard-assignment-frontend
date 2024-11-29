@@ -1,50 +1,50 @@
-# React + TypeScript + Vite
+# Frontend Setup Guide for Ashley Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+This is the frontend application for the Ashley Project. It requires the backend to be set up and running before installation.
 
-Currently, two official plugins are available:
+## Prerequisites
+- Node.js (recommended latest LTS version)
+- npm (Node Package Manager)
+- Backend Project (https://github.com/saumitravilankar/reguard-assignment-backend)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Backend Setup Requirement
+**Important:** Ensure the backend project is set up and running before proceeding:
+1. Clone the backend repository: https://github.com/saumitravilankar/reguard-assignment-backend
+2. Set up PostgreSQL database
+3. Start the backend server
 
-## Expanding the ESLint configuration
+## Setup Instructions
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1. Clone the Frontend Project
+```bash
+git clone <your-frontend-repository-url>
+cd <frontend-project-directory>
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2. Install Dependencies
+```bash
+npm install
 ```
+
+### 3. Environment Configuration
+- A `.env` file is provided for easier setup and testing
+- Verify that the environment variables are correctly configured
+
+### 4. Start Development Server
+```bash
+npm run dev
+```
+
+## Troubleshooting
+- Ensure backend server is running on the expected port
+- Check `.env` file for correct backend URL configuration
+- Verify all dependencies are installed correctly
+
+## Recommended Versions
+- Node.js: LTS version
+- npm: Latest stable version
+
+## Connection Notes
+- The frontend will communicate with the backend API
+- Make sure backend services are active before running frontend
