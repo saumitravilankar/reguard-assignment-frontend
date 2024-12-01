@@ -18,8 +18,8 @@ This is the frontend application for the Ashley Project. It requires the backend
 
 ### 1. Clone the Frontend Project
 ```bash
-git clone <your-frontend-repository-url>
-cd <frontend-project-directory>
+git clone https://github.com/saumitravilankar/reguard-assignment-frontend.git
+cd reguard-assignment-frontend
 ```
 
 ### 2. Install Dependencies
